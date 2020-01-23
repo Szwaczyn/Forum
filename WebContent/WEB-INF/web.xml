@@ -20,6 +20,11 @@
   	<servlet-class>javaee.servlets.HelloWorldHTML</servlet-class>
   </servlet>
   
+   <servlet>
+  	<servlet-name>getFile</servlet-name>
+  	<servlet-class>javaee.servlets.GetFile</servlet-class>
+  </servlet>
+  
   <servlet-mapping>
   	<servlet-name>helloWorld</servlet-name>
   	<url-pattern>/hello</url-pattern>
@@ -28,5 +33,10 @@
   <servlet-mapping>
   	<servlet-name>helloWorldHTML</servlet-name>
   	<url-pattern>/helloHTML</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+  	<servlet-name>getFile</servlet-name>
+  	<url-pattern>/file</url-pattern>
   </servlet-mapping>
 </web-app>
