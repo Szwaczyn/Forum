@@ -17,7 +17,8 @@ public class GetFile extends HttpServlet{
 	{
 		response.setContentType("image/png");
 		OutputStream os = response.getOutputStream();
-		byte[] bufor = readFile("D:\\Projekty\\Servlets\\Forum\\Resources");
+		response.addHeader("Content-Disposition", "attachment;fielname=image.png");
+		byte[] bufor = readFile("D:\\Projekty\\Servlets\\Forum\\Resources\\obraz1.png");
 		os.write(bufor);
 		os.flush();
 	}
