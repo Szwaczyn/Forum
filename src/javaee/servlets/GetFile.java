@@ -15,9 +15,9 @@ public class GetFile extends HttpServlet{
 	@Override
 	protected void doGet(HttpServletRequest rquest, HttpServletResponse response) throws IOException
 	{
-		response.setContentType("image/png");
+		response.setContentType("image/png"); 
 		OutputStream os = response.getOutputStream();
-		response.addHeader("Content-Disposition", "attachment;fielname=image.png");
+		response.addHeader("Content-Disposition", "attachment;fielname=image.png"); // Pobranie obrazu
 		byte[] bufor = readFile("D:\\Projekty\\Servlets\\Forum\\Resources\\obraz1.png");
 		os.write(bufor);
 		os.flush();

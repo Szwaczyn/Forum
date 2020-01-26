@@ -14,27 +14,43 @@
   	<servlet-name>helloWorld</servlet-name>
   	<servlet-class>javaee.servlets.HelloWorld</servlet-class>
   </servlet>
-  
    <servlet>
   	<servlet-name>helloWorldHTML</servlet-name>
   	<servlet-class>javaee.servlets.HelloWorldHTML</servlet-class>
   </servlet>
-  
    <servlet>
   	<servlet-name>getFile</servlet-name>
   	<servlet-class>javaee.servlets.GetFile</servlet-class>
   </servlet>
+   <servlet>
+  	<servlet-name>form</servlet-name>
+  	<servlet-class>javaee.servlets.Form</servlet-class>
+  </servlet>
+   <servlet>
+  	<servlet-name>session</servlet-name>
+  	<servlet-class>javaee.servlets.SessionTest</servlet-class>
+  </servlet>
   
+  <servlet-mapping>
+  <servlet-name>session</servlet-name>
+  	<url-pattern>/session</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>form</servlet-name>
+  	<url-pattern>/form</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>form</servlet-name>
+  	<url-pattern>/Form</url-pattern>
+  </servlet-mapping>
   <servlet-mapping>
   	<servlet-name>helloWorld</servlet-name>
   	<url-pattern>/hello</url-pattern>
   </servlet-mapping>
- 
   <servlet-mapping>
   	<servlet-name>helloWorldHTML</servlet-name>
   	<url-pattern>/helloHTML</url-pattern>
-  </servlet-mapping>
-  
+  </servlet-mapping> 
   <servlet-mapping>
   	<servlet-name>getFile</servlet-name>
   	<url-pattern>/file</url-pattern>
