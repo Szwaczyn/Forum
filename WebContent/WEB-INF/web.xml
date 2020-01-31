@@ -55,4 +55,8 @@
   	<servlet-name>getFile</servlet-name>
   	<url-pattern>/file</url-pattern>
   </servlet-mapping>
+  
+  <listener>
+  	<listener-class>javaee.servlets.listeners.ContextListener</listener-class>
+  </listener>
 </web-app>

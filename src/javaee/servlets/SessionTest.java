@@ -26,5 +26,9 @@ public class SessionTest extends HttpServlet {
 		session.setAttribute("counter", counter);
 		
 		pw.println("Counter: " + counter);
+		session.setMaxInactiveInterval(30);
+		
+		// session.invalidate(); 					Czyszczenie sesji 
+		// session.setMaxInactiveInterval(n);		Wyczyszczenie sesji nastąpi po n nieaktywnych sekundach
 	}
 }
