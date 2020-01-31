@@ -59,4 +59,28 @@
   <listener>
   	<listener-class>javaee.servlets.listeners.ContextListener</listener-class>
   </listener>
+  
+  <login-config>
+  	<auth-method>BASIC</auth-method>
+  </login-config>
+  <security-role>
+  	<role-name>administrator</role-name>
+  </security-role>
+   <security-role>
+  	<role-name>user</role-name>
+  </security-role>
+  
+  <security-constraint>
+  	<web-resource-collection>
+  		<web-resource-name>SafetyRule</web-resource-name>
+  		<url-pattern>*.jsp</url-pattern>
+  		<http-method>GET</http-method>
+  	</web-resource-collection>
+  	<auth-constraint>
+  		<role-name>administrator</role-name>
+  	</auth-constraint>
+  	<user-data-constraint>
+  		<transport-guarantee>NONE</transport-guarantee>
+  	</user-data-constraint>
+  </security-constraint>
 </web-app>
