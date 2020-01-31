@@ -17,10 +17,6 @@ public class Attribute extends HttpServlet {
 		PrintWriter pw = response.getWriter();
 		
 		ServletContext context = this.getServletContext();
-		String imie = request.getParameter("imie");
-		
-		synchronized (context) {
-			context.setAttribute("imie", imie);
-		}
+		pw.write("ok");
 	}
 }

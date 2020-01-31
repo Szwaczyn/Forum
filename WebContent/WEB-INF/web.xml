@@ -30,6 +30,10 @@
   	<servlet-name>session</servlet-name>
   	<servlet-class>javaee.servlets.SessionTest</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>Attribute</servlet-name>
+  	<servlet-class>javaee.servlets.Attribute</servlet-class>
+  </servlet>
   
   <servlet-mapping>
   <servlet-name>session</servlet-name>
@@ -54,6 +58,10 @@
   <servlet-mapping>
   	<servlet-name>getFile</servlet-name>
   	<url-pattern>/file</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>Attribute</servlet-name>
+  	<url-pattern>/attribute</url-pattern>
   </servlet-mapping>
   
   <listener>
@@ -83,4 +91,13 @@
   		<transport-guarantee>NONE</transport-guarantee>
   	</user-data-constraint>
   </security-constraint>
+  
+  <filter>
+  	<filter-name>filter</filter-name>
+  	<filter-class>javaee.servlets.filters.FilterRules</filter-class>
+  </filter>
+  <filter-mapping>
+  	<filter-name>filter</filter-name>
+  	<url-pattern>/attribute</url-pattern>
+  </filter-mapping>
 </web-app>
