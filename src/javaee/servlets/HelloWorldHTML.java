@@ -15,7 +15,8 @@ public class HelloWorldHTML extends HttpServlet {
 	{
 		RequestDispatcher rd = request.getRequestDispatcher("/index.jsp"); // Pobranie dispatchera
 		rd.include(request, response); // Dołączenie żądania so serwleu.
-		rd.forward(request, response); // Przekazanie żądania do serwletu.
+		//rd.forward(request, response); // Przekazanie żądania do serwletu.
+		response.sendRedirect("/Forum/file"); // Przekierowanie na inny adres
 		
 		response.setContentType("text/html charset=utf-8");
 		PrintWriter pw = response.getWriter();
