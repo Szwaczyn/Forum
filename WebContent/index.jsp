@@ -8,5 +8,10 @@
 </head>
 <body>
 	<h1>10.23.4</h1>
+	${user.name} 
+	
+	<jsp:include page="/content.jsp">
+		<jsp:param name="toShow" value="content" />
+	</jsp:include>
 </body>
 </html>

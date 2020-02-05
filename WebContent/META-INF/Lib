@@ -1,0 +1,13 @@
+Expression Language	
+	
+	<!-- ${param.imie} Odwołanie się do parametru imie -->
+	<!-- ${paramValues.imie[0]} Gdy zostaną przesłane dwa parametry to mozna się do nich odwołać w ten sposób -->
+	<!-- ${headerValues. } -->
+	<!-- ${cookie. } -->
+	<!-- ${initParam. } -->
+	<!--  ${requestScope.imie} -->
+	<!--  ${sessionScope.imie} -->
+	<!--  ${applicationScope.imie} -->
+	<!--  ${pageScope.imie} -->
+	<!--  ${pageContext.imie} -->
+	<!--  ${imie} --> zostanie użyty parametr o nazwie imie.
