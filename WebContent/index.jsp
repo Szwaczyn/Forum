@@ -14,10 +14,18 @@
 	
 	${user.name }
 	
+	<!--  Akcja zezwalająca na dołączenie zewnętrznego pliku include/forward -->
 	<jsp:include page="/content.jsp">
 		<jsp:param name="toShow" value="content" />
 		<jsp:param name="club" value="len" />
 	</jsp:include>
+	
+	
+	<jsp:useBean id="active" scope="session" class="javaee.Users">
+		<jsp:setProperty name="active" property="name" value="empty"/>
+	</jsp:useBean>
+	
+	<jsp:getProperty property="name" name="active"/>
 	
 </body>
 </html>
