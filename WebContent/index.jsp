@@ -8,10 +8,14 @@
 </head>
 <body>
 	<h1>10.23.4</h1>
-	${user.name} 
+	${requestScope.imie} 	<!--  Atrybut ustawiony w serwlecie -->
+	${param.imie}			<!--  Parametr przekazany w zaptraniu ?imie=jan -->
+	${cookie.imie }			<!--  Odwołanie się do ciasteczka -->
 	
 	<jsp:include page="/content.jsp">
 		<jsp:param name="toShow" value="content" />
+		<jsp:param name="club" value="len" />
 	</jsp:include>
+	
 </body>
 </html>

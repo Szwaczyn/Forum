@@ -22,7 +22,8 @@ public class HelloWorld extends HttpServlet {
 		PrintWriter pw = response.getWriter();
 		pw.println("Hello World ! ś");
 		
-		Users u = new Users("Jan Kowalski", "tomcat");
+		Users u = new Users();
+		u.setName("Jan Kowalski");
 		u.setId(10);
 		request.setAttribute("user", u);
 		

@@ -23,12 +23,11 @@ public class Users implements Serializable{
 		this.id = id;
 	}
 	
-	public Users(){
-		
+	public void setName(String name) {
+		this.name = name;
 	}
 	
-	public Users(String name, String password) {
-		this.password = password;
-		this.name = name;
+	public Users(){
+		
 	}
 }
