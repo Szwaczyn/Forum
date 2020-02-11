@@ -12,6 +12,8 @@
 	${param.imie}			<!--  Parametr przekazany w zaptraniu ?imie=jan -->
 	${cookie.imie }			<!--  Odwołanie się do ciasteczka -->
 	
+	${user.name }
+	
 	<jsp:include page="/content.jsp">
 		<jsp:param name="toShow" value="content" />
 		<jsp:param name="club" value="len" />

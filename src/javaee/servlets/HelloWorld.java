@@ -24,6 +24,7 @@ public class HelloWorld extends HttpServlet {
 		
 		Users u = new Users();
 		u.setName("Jan Kowalski");
+		u.setPassword("tajnehaslo");
 		u.setId(10);
 		request.setAttribute("user", u);
 		

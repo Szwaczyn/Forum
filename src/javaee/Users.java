@@ -15,12 +15,12 @@ public class Users implements Serializable{
 		return id;
 	}
 	
-	public String getName() {
-		return this.name;
-	}
-	
 	public void setId(int id) {
 		this.id = id;
+	}
+	
+	public String getName() {
+		return this.name;
 	}
 	
 	public void setName(String name) {
@@ -29,5 +29,13 @@ public class Users implements Serializable{
 	
 	public Users(){
 		
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
 	}
 }
