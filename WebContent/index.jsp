@@ -2,6 +2,7 @@
     pageEncoding="ISO-8859-1"%>
     
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -59,5 +60,15 @@
 			<c:out value="Position 2" />
 		</c:otherwise>
 	</c:choose>
+	
+	<c:forEach items="${List }" var="userInLoop">
+		<br> ${userInLoop.name } 
+	</c:forEach>
+	
+	<c:url value="/lista">
+		<c:param name="id" value="1" />
+	</c:url>
+	
+	${fn:length(List) }
 </body>
 </html>
