@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="ISO-8859-1"%>
+    
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -27,5 +29,35 @@
 	
 	<jsp:getProperty property="name" name="active"/>
 	
+	<c:out value="${user.password}" default="Nie posiada hasła"/>
+	
+	<c:if test="${user.password eq 'tajnehaslo' }">
+		<p>Ziusław ma hasło</p>
+	</c:if>
+	
+	<c:set var="variable" scope="request" value="${user.name }" />
+	
+	${variable }
+	
+	<c:set target="${user}" property="name" value="New name" />
+	
+	${user.name }
+	
+	<c:catch var="Exception">
+		<c:set target="${user }" value="asd" property="asdf" />
+	</c:catch>
+	
+	${Exception }
+	
+	<br>
+	
+	<c:choose>
+		<c:when test="${user.password eq 'tajnehaslo' }">
+			<c:out value="Position 1" />
+		</c:when>
+		<c:otherwise>
+			<c:out value="Position 2" />
+		</c:otherwise>
+	</c:choose>
 </body>
 </html>
