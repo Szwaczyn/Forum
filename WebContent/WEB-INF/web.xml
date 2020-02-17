@@ -34,6 +34,10 @@
   	<servlet-name>Attribute</servlet-name>
   	<servlet-class>javaee.servlets.Attribute</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>SQL</servlet-name>
+  	<servlet-class>javaee.servlets.database.SQL</servlet-class>
+  </servlet>
   
   <servlet-mapping>
   <servlet-name>session</servlet-name>
@@ -62,6 +66,10 @@
   <servlet-mapping>
   	<servlet-name>Attribute</servlet-name>
   	<url-pattern>/attribute</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>SQL</servlet-name>
+  	<url-pattern>/sql</url-pattern>
   </servlet-mapping>
   
   <listener>
