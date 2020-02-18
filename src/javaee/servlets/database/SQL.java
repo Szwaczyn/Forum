@@ -6,9 +6,12 @@ import java.sql.*;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+
+import com.mysql.fabric.Response;
 
 public class SQL extends HttpServlet {
 	
@@ -39,5 +42,40 @@ public class SQL extends HttpServlet {
 		} catch(SQLException e) {
 			pw.write(e.getMessage());
 		}
+		
+		pw.println(getForm());
+
+	}
+	
+	@Override 
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException
+	{
+		response.setContentType("text/html charset=utf-8");
+		String name = request.getParameter("name"); // Pobieranie danych z formularza
+		String surname = request.getParameter("surname");
+		
+		PrintWriter pw = response.getWriter();
+		
+		if(name != null && !"".equals(name) && surname != null && !"".equals(surname))
+		{
+			pw.println(name + " " + surname);
+		}
+		else pw.println("<h2>You have to enter name and surname!</h2>");
+	}
+	
+	private String getForm() {
+		String response = "";
+		response += "<head> <title>form</title> </head> <body> ";
+		
+		response += "<h1> Form </h1>";
+		
+		response += "<form method=\"post\">";
+		response += "<p> Name </p> <input name=\"name\" />";
+		response += "<p> Surname </p> <input name=\"surname\" /> <input type=\"submit\" value=\"Send\" />";
+		response +="</form>";
+		
+		response += "</body>";
+		
+		return response;
 	}
 }
